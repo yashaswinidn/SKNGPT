@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff6f61, #de8f2a);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            font-size: 3em;
+            animation: moveAndBounce 5s ease-in-out infinite;
+            background: linear-gradient(135deg, #ff9a9e, #f4a8a4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        @keyframes moveAndBounce {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            50% {
+                transform: translateX(50%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            perspective: 1000px;
+        }
+        .profile-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.6s, box-shadow 0.6s, background-color 0.4s;
+            position: relative;
+            cursor: pointer;
+        }
+        .profile-card:hover {
+            transform: rotateY(10deg) scale(1.1);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #ff9a9e, #f4a8a4);
+        }
+        .profile-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ffbf00, #ff6b6b);
+            opacity: 0.1;
+            transition: opacity 0.4s;
+        }
+        .profile-card:hover::before {
+            opacity: 0.4;
+        }
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ff6b6b;
+            transition: border-color 0.4s, transform 0.4s;
+        }
+        .profile-card img:hover {
+            border-color: #ffbf00;
+            transform: scale(1.1);
+        }
+        .profile-card h3 {
+            margin: 15px 0;
+            font-size: 1.4em;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .profile-card p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: #666;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Department of Computer Science Student Profiles</h1>
+        <div class="profile-grid">
+            <!-- Profile 1 -->
+            <div class="profile-card">
+                <img src="HS.JPG" alt="Student Photo">
+                <h3>Mr. Hemanth Sakre</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo1.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123456</p>
+                <p>CGPA: 8.5</p>
+            </div>
+
+            <div class="profile-card">
+                <img src="path/to/photo2.jpg" alt="Student Photo">
+                <h3>Student Name</h3>
+                <p>USN: 123457</p>
+                <p>CGPA: 8.7</p>
+            </div>
+            <!-- Add more profiles here following the same structure -->
+        </div>
+    </div>
+</body>
+</html>
